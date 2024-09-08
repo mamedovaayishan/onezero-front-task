@@ -24,7 +24,7 @@ const CategoryList = () => {
   return (
     <>
       {filteredCategories.map((category) => (
-        <section className="mt-3" key={category.id}>
+        <section className=" categoryList mt-3" key={category.id}>
           <h3>{category.name[0].value}</h3>
 
           <Row xs={2} md={5} className="g-3 mt-2">
@@ -32,6 +32,7 @@ const CategoryList = () => {
               <Col key={item.id}>
                 <Card>
                   <Card.Img
+                  className='imageIcon'
                     variant="top"
                     // height="300"
                     onClick={() => setSelectedItem({ ...item, categoryName: category.name[0]?.value })}
@@ -39,7 +40,7 @@ const CategoryList = () => {
                   />
                   <Card.Body>
                     <Card.Title>{item.name[0].value}</Card.Title>
-                    <CardText>${item.priceSell}</CardText>
+                    <CardText className='price'>${item.priceSell}</CardText>
                   </Card.Body>
                 </Card>
               </Col>

@@ -16,17 +16,17 @@ const ProductModal = (props) => {
 
         </Modal.Header>
         <Modal.Body>
-          <Row>
+          <Row >
             <Col md={6}>
               <img
                 src="https://bakingmischief.com/wp-content/uploads/2019/05/iced-mocha-image-square.jpg"
-                className="img-fluid rounded"
+                className="img-fluid rounded "
               />
             </Col>
             <Col md={6} className="d-flex flex-column justify-content-center gap-2">
               <h2>{item.name[0]?.value}</h2>
               <h5><strong>Kateqoriya:</strong> {item.categoryName}</h5>
-              <h4>${item.priceSell}</h4>
+              <h4 className="price">${item.priceSell}</h4>
             </Col>
           </Row>
         </Modal.Body>
