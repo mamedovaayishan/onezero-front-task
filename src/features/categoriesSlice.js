@@ -1,6 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-// import jsonData from '../../public/menu.json';
 
 export const fetchCategories = createAsyncThunk('categories/fetchCategories', async () => {
   const response = await axios.get('http://localhost:5000/data'); 
@@ -8,9 +7,7 @@ export const fetchCategories = createAsyncThunk('categories/fetchCategories', as
   return response.data;
 });
 
-// export const fetchCategories = createAsyncThunk('categories/fetchCategories', async () => {
-//   return jsonData;
-// });
+
 
 const categoriesSlice = createSlice({
   name: 'categories',
